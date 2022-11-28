@@ -1,0 +1,69 @@
+﻿<Window x:Class="BMSWPF.View.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BMSWPF.View"
+        xmlns:vm="clr-namespace:BMSWPF.ViewModel"
+        mc:Ignorable="d"
+        Title="Login" Height="350" Width="350" Background="Aquamarine">
+    
+    <Window.Resources>
+        <vm:LoginVM x:Key="Loginvm"/>
+    </Window.Resources>
+    
+    <StackPanel DataContext="{StaticResource Loginvm}"
+        Margin="10">
+        
+        <Label Content="UserName"
+               Style="{StaticResource LabelStyle}"/>
+        <TextBox 
+            Text="{Binding UserName, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+            Height="25"/>
+        <Label Content="PassWord"
+               Style="{StaticResource LabelStyle}"/>
+        <!--<TextBox/>-->
+        <TextBox 
+            Text="{Binding Password , Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+            Height="25"/>
+        <Button
+            Command="{Binding LoginSecurityCommand}"
+            Content="Login"
+            Margin="0,5"
+            Style="{StaticResource ButtonStyle}"/>
+        <Separator
+            Margin="0,5,0,0"/>
+        <!--Style="{StaticResource SeparatorStyle}"/>-->
+        <Grid
+            Margin="0,5"
+            HorizontalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock
+                Grid.Column="0"
+                Text="If New Customer?"
+                HorizontalAlignment="Left"/>
+            <Button Content="Create Account"
+                    Command="{Binding SignupCommand}"
+                    Margin="10,0,0,0"
+                    Grid.Column="1"
+                    HorizontalAlignment="Right"
+                    Foreground="Red"
+                    Background="LightGoldenrodYellow"
+                    BorderThickness="0"/>
+        </Grid>
+        <Label
+            Content="{Binding Alert,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+            Style="{StaticResource LabelStyle}"
+            Foreground="Red"
+            FontSize="14"
+            FontWeight="Bold"
+            HorizontalAlignment="Center"/>
+
+
+    </StackPanel>
+    
+   
+</Window>

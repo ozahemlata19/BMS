@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BMSWPF", "BMSWPF\BMSWPF.csproj", "{8C90B5FD-9F39-467D-A642-F73308CF4298}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BMSWPF", "BMSWPF\BMSWPF.csproj", "{8C90B5FD-9F39-467D-A642-F73308CF4298}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BMSAPI", "BMSAPI\BMSAPI.csproj", "{FC531ADB-F3D2-4074-B3A5-44B491B37D38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{8C90B5FD-9F39-467D-A642-F73308CF4298}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C90B5FD-9F39-467D-A642-F73308CF4298}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C90B5FD-9F39-467D-A642-F73308CF4298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC531ADB-F3D2-4074-B3A5-44B491B37D38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC531ADB-F3D2-4074-B3A5-44B491B37D38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC531ADB-F3D2-4074-B3A5-44B491B37D38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC531ADB-F3D2-4074-B3A5-44B491B37D38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

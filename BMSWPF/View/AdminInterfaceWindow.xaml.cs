@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace BMSWPF.View
 {
     /// <summary>
-    /// Interaction logic for LoginWindow1.xaml
+    /// Interaction logic for AdminInterfaceWindow.xaml
     /// </summary>
-    public partial class LoginWindow1 : Window
+    public partial class AdminInterfaceWindow : Window
     {
-        public LoginWindow1()
+        public AdminInterfaceWindow()
         {
             InitializeComponent();
         }
