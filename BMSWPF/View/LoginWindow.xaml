@@ -23,6 +23,9 @@
         <Label Content="PassWord"
                Style="{StaticResource LabelStyle}"/>
         <!--<TextBox/>-->
+        <!--<TextBox 
+            Text="{Binding Password , Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+            Height="25"/>-->
         <TextBox 
             Text="{Binding Password , Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
             Height="25"/>

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:BMSWPF.View"
         xmlns:vm="clr-namespace:BMSWPF.ViewModel"
         mc:Ignorable="d"
-        Title="SignupWindow" Height="700" Width="400">
+        Title="SignupWindow" Height="600" Width="500">
     <!--<StackPanel Margin="10">
         
         <Grid Margin="0,5"
@@ -68,8 +68,9 @@
     <Window.Resources>
         <vm:SignupVM x:Key="SignupVm"/>
     </Window.Resources>
-    
-    <Grid
+    <StackPanel>
+        <Label Content="User Registration" FontSize="20" Background="SkyBlue" HorizontalAlignment="Left"/>
+        <Grid 
         DataContext="{StaticResource SignupVm}"
         Margin="10">
         <Grid.ColumnDefinitions>
@@ -80,15 +81,15 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
 
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         
         
@@ -205,15 +206,16 @@
              Grid.Row="5"
                Grid.Column="2"
             Command="{Binding CreateAccountCommand}"
-            Content="|Create Account|"
+            Content="|Register|"
             Margin="5,10"
             Width="Auto"
             FontSize="16"
             Height="24"
             BorderThickness="0"
-            Background="LightGray"
+            Background="DarkBlue"
             Foreground="AliceBlue"
             FontWeight="Bold"/>
 
     </Grid>
+    </StackPanel>
 </Window>

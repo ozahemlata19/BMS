@@ -4,9 +4,66 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BMSWPF.View"
+        xmlns:vm="clr-namespace:BMSWPF.ViewModel"
         mc:Ignorable="d"
         Title="UserInterface" Height="450" Width="800">
-    <Grid>
+    <Window.Resources>
+        <vm:UserInterfaceVM x:Key="UserInterface"/>
+
+    </Window.Resources>
+    
+    <Grid
+        DataContext="{StaticResource UserInterface}">
+        <StackPanel>
+            <Label Content="User Interface" FontSize="20" Background="SkyBlue" HorizontalAlignment="Left"/>
+            <Grid 
         
+        Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    
+                </Grid.RowDefinitions>
+
+                <Button
+             Grid.Row="0"
+               Grid.Column="0"
+            Command="{Binding CreateAccountCommand}"
+            Content="|Update Details|"
+            Margin="5,10"
+            Width="Auto"
+            FontSize="16"
+            Height="24"
+            BorderThickness="0"
+            Background="DarkBlue"
+            Foreground="AliceBlue"
+            FontWeight="Bold"/>
+
+                <Button
+             Grid.Row="0"
+               Grid.Column="1"
+            Command="{Binding ApplyLoanCommand}"
+            Content="|Apply Loan|"
+            Margin="5,10"
+            Width="Auto"
+            FontSize="16"
+            Height="24"
+            BorderThickness="0"
+            Background="DarkBlue"
+            Foreground="AliceBlue"
+            FontWeight="Bold"/>
+
+            </Grid>
+        </StackPanel>
     </Grid>
 </Window>
