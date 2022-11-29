@@ -15,5 +15,21 @@ namespace BMSWPF.ViewModel
             get { return username; }
             set { username = value; }
         }
+
+        private static int londId;
+
+        public static int LOANID
+        {
+            get { return londId; }
+            set { londId = value; }
+        }
+        private static string comment;
+
+        public static string COMMENT
+        {
+            get { return comment; }
+            set { comment = value; }
+        }
+        
     }
 }

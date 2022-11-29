@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BMSWPF.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,19 @@ namespace BMSWPF.View
         public AdminInterfaceWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DataGrid dg = (DataGrid)sender;
+            LoanDetail row = dg.SelectedItem as LoanDetail;
+            if (row != null)
+                ViewModel.GlobalVariables.LOANID = row.LoanId;
         }
     }
 }

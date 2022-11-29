@@ -4,9 +4,101 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BMSWPF.View"
+        xmlns:vm="clr-namespace:BMSWPF.ViewModel"
         mc:Ignorable="d"
-        Title="AdminInterfaceWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Admin Dashboard" WindowState="Maximized">
+
+    <Window.Resources>
+        <vm:AdminInterfaceVM x:Key="AdminDashboardVm"/>
+    </Window.Resources>
+
+    <StackPanel
+        DataContext="{StaticResource AdminDashboardVm}">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="Self Loan Bank"
+                Style="{StaticResource LabelStyle}"
+                   HorizontalAlignment="Center"/>
+
+            <Button
+                Command="{Binding SessionCommand}"
+                Grid.Column="1"
+                Content="Log Out"
+                Margin="10,0"
+                Foreground="Red"
+                Background="White"
+                FontSize="16"
+                BorderThickness="0"/>
+        </Grid>
+        <Separator
+            Style="{StaticResource SeparatorStyle}"/>
+
+        <Grid
+            Margin="5,10,0,0">
+
+            <DataGrid
+                ItemsSource="{Binding LoanDetails}"
+                SelectionChanged="DataGrid_SelectionChanged"
+                AutoGenerateColumns="False"
+                AlternatingRowBackground="Orange"
+                CanUserAddRows="False"
+                CanUserDeleteRows="False"
+                CanUserSortColumns="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Loan Id" Width="auto" Binding="{Binding LoanId}"/>
+                    <DataGridTextColumn Header="Loan Type" Width="*" Binding="{Binding LoanType}"/>
+                    <DataGridTextColumn Header="Loan Amount" Width="*" Binding="{Binding LoanAmount}"/>
+                    <DataGridTextColumn Header="Loan Date" Width="*" Binding="{Binding LoanDate,StringFormat=d}"/>
+                    <DataGridTextColumn Header="Loan ROI" Width="*" Binding="{Binding RateOfInterest}"/>
+                    <DataGridTextColumn Header="Loan Duration" Width="*" Binding="{Binding LoanDuration}"/>
+                    <DataGridTextColumn Header="Status" Width="*" Binding="{Binding Status}"/>
+
+
+                    <DataGridTemplateColumn Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+
+                                <Grid
+                                    DataContext="{StaticResource AdminDashboardVm}">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Button
+                                        Command="{Binding ApprovedStatusCommand}"
+                                        Content="Approve"
+                                        Background="White"
+                                        Foreground="Red"
+                                        FontSize="12"
+                                        BorderThickness="2"
+                                        BorderBrush="DarkBlue"/>
+
+                                    <Button
+                                        Margin="5,0"
+                                        Grid.Column="1"
+                                        Command="{Binding RejectCommands}"
+                                        Content="Reject"
+                                        Background="White"
+                                        Foreground="Red"
+                                        FontSize="12"
+                                        BorderThickness="2"
+                                        BorderBrush="DarkBlue"/>
+                                </Grid>
+
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <Separator
+            Style="{StaticResource SeparatorStyle}"/>
+
+    </StackPanel>
 </Window>

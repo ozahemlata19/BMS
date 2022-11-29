@@ -9,10 +9,12 @@
         Title="ApplyLoanWindow" Height="650" Width="500">
 
     <Window.Resources>
-        <vm:SignupVM x:Key="ApplyLoanVM"/>
+        <vm:ApplyLoanVM x:Key="ApplyLoanVM"/>
     </Window.Resources>
 
-    <StackPanel Margin="10,10,0,0" HorizontalAlignment="Center">
+    <StackPanel
+        DataContext="{StaticResource ApplyLoanVM}"
+        Margin="10,10,0,0" HorizontalAlignment="Center">
         <Label Content="Apply Loan Here"/>
 
         <Label Content="Loan Type"
@@ -41,25 +43,19 @@
 
         <Label Content="ROI%"
                Style="{StaticResource LabelStyle}"/>
-        <TextBox Text="{Binding RateOfInterest,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Text="{Binding ROI,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
 
         <Label Content="Duration Of Loan (In Month)"
                Style="{StaticResource LabelStyle}"/>
         <TextBox Text="{Binding LoanDuration,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
 
         <Button
-            Command="{Binding ApplyLoanCommand}"
+            Command="{Binding CreateLoanCommand}"
             Content="Apply"
             Margin="10"
             Style="{StaticResource ButtonStyle}"/>
 
-        <Label 
-        Content="{Binding warning,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
-        Style="{StaticResource LabelStyle}"
-        Foreground="Red"
-        FontSize="14"
-        FontWeight="Bold"
-        HorizontalAlignment="Center"/>
+       
 
     </StackPanel>
     
