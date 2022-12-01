@@ -30,6 +30,7 @@ namespace BMSAPI.Controllers
             else
                 return BadRequest("Something Went Wrong");
         }
+        */
 
         [Route("api/[controller]/user/{uname}")]
         [HttpPut]
@@ -42,7 +43,7 @@ namespace BMSAPI.Controllers
             else
                 return BadRequest("Something Went Wrong");
         }
-        */
+        
         [Route("api/[controller]/status/{id}")]
         [HttpPut]
         public async Task<IActionResult> Put(int id, [FromBody] string value)

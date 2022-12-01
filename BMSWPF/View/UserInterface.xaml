@@ -15,6 +15,7 @@
     <Grid
         DataContext="{StaticResource UserInterface}">
         <StackPanel>
+            <Label Content="{Binding UserName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"  Foreground="Red"/>
             <Label Content="User Interface" FontSize="20" Background="SkyBlue" HorizontalAlignment="Left"/>
             <Grid 
         
@@ -38,7 +39,7 @@
                 <Button
              Grid.Row="0"
                Grid.Column="0"
-            Command="{Binding CreateAccountCommand}"
+            Command="{Binding UpdateDetailCommand}"
             Content="|Update Details|"
             Margin="5,10"
             Width="Auto"

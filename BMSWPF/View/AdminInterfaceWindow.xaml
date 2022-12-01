@@ -21,7 +21,7 @@
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
 
-            <Label Content="Self Loan Bank"
+            <Label Content="Loan system for Bank"
                 Style="{StaticResource LabelStyle}"
                    HorizontalAlignment="Center"/>
 
@@ -45,7 +45,7 @@
                 ItemsSource="{Binding LoanDetails}"
                 SelectionChanged="DataGrid_SelectionChanged"
                 AutoGenerateColumns="False"
-                AlternatingRowBackground="Orange"
+                AlternatingRowBackground="Bisque"
                 CanUserAddRows="False"
                 CanUserDeleteRows="False"
                 CanUserSortColumns="True">

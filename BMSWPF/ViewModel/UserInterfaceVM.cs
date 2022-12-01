@@ -12,13 +12,24 @@ namespace BMSWPF.ViewModel
 {
     class UserInterfaceVM : INotifyPropertyChanged
     {
+        private string userName;
+        public string UserName
+        {
+            get { return userName; }
+            set
+            {
+                userName = value;
+                OnPropertyChanged("UserName");
+            }
+        }
         public ApplyLoanCommand ApplyLoanCommand { get; set; }
-        //public UpdateUserCommand UpdateUserCommand { get; set; }
+        public UpdateDetailCommand UpdateDetailCommand { get; set; }
 
         public UserInterfaceVM()
         {
             ApplyLoanCommand = new ApplyLoanCommand(this);
-            //UpdateUserCommand = new UpdateUserCommand(this);
+            UpdateDetailCommand = new UpdateDetailCommand(this);
+            UserName = GlobalVariables.USERNAME;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -31,6 +42,12 @@ namespace BMSWPF.ViewModel
         {
             ApplyLoanWindow loan = new ApplyLoanWindow();
             loan.ShowDialog();
+        }
+
+        public void ExecuteUpdate()
+        {
+            UpdateDetailWindow updt = new UpdateDetailWindow();
+            updt.ShowDialog();
         }
     }
 }

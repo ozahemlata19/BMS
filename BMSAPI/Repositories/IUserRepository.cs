@@ -13,5 +13,6 @@ namespace BMSAPI.Repositories
         Task<bool> SaveUserDetailAsync(UserDetail userDetail);
         Task<bool> EndSessionAsync(string userName);
         Task<bool> ValidateUserSessionAsync(string userName);
+        Task<bool> UpdateUserDeatilAsync(string userName, UserDetail userDetail);
     }
 }

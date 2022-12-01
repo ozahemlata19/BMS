@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BMSWPF.View"
         xmlns:vm="clr-namespace:BMSWPF.ViewModel"
+        xmlns:components="clr-namespace:BMSWPF.View.Components"
         mc:Ignorable="d"
         Title="Login" Height="350" Width="350" Background="Aquamarine">
     
@@ -26,9 +27,11 @@
         <!--<TextBox 
             Text="{Binding Password , Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
             Height="25"/>-->
-        <TextBox 
+        <!--<TextBox 
             Text="{Binding Password , Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
-            Height="25"/>
+            Height="25"/>-->
+        <components:PasswordBoxControl 
+            Password ="{Binding PassWord, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="25"/>
         <Button
             Command="{Binding LoginSecurityCommand}"
             Content="Login"

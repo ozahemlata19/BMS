@@ -14,13 +14,13 @@
 
     <StackPanel
         DataContext="{StaticResource ApplyLoanVM}"
-        Margin="10,10,0,0" HorizontalAlignment="Center">
-        <Label Content="Apply Loan Here"/>
+        Margin="10,10,10,10" HorizontalAlignment="Center">
+        <Label Content="Apply Loan Here" FontWeight="Bold" Background="Blue"/>
 
-        <Label Content="Loan Type"
+        <Label Content="Loan Type" Margin="5"
                Style="{StaticResource LabelStyle}"/>
         <ComboBox
-           
+           Margin="5"
             SelectedItem="{Binding LoanType,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
             <ComboBoxItem>
                 Home
@@ -31,23 +31,23 @@
             </ComboBoxItem>
         </ComboBox>
 
-        <Label Content="Loan Amount"
+        <Label Content="Loan Amount" Margin="5"
                Style="{StaticResource LabelStyle}"/>
-        <TextBox Text="{Binding LoanAmount,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Text="{Binding LoanAmount,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
 
-        <Label Content="Loan Date"
+        <Label Content="Loan Date" Margin="5"
                Style="{StaticResource LabelStyle}"/>
         <DatePicker
-            SelectedDateFormat="Short"
+            SelectedDateFormat="Short" Margin="5"
             SelectedDate="{Binding LoanDate,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
 
-        <Label Content="ROI%"
+        <Label Content="ROI%" Margin="10"
                Style="{StaticResource LabelStyle}"/>
-        <TextBox Text="{Binding ROI,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Text="{Binding ROI,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
 
-        <Label Content="Duration Of Loan (In Month)"
+        <Label Content="Duration Of Loan (In Month)" Margin="10"
                Style="{StaticResource LabelStyle}"/>
-        <TextBox Text="{Binding LoanDuration,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Text="{Binding LoanDuration,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
 
         <Button
             Command="{Binding CreateLoanCommand}"
