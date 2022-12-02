@@ -31,7 +31,7 @@
             Text="{Binding Password , Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
             Height="25"/>-->
         <components:PasswordBoxControl 
-            Password ="{Binding PassWord, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="25"/>
+            Password ="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="25"/>
         <Button
             Command="{Binding LoginSecurityCommand}"
             Content="Login"
