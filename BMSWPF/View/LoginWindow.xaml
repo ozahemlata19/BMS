@@ -19,8 +19,9 @@
         <Label Content="UserName"
                Style="{StaticResource LabelStyle}"/>
         <TextBox 
-            Text="{Binding UserName, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
-            Height="25"/>
+            Text="{Binding UserName, ValidatesOnDataErrors=True, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+            Height="25" ToolTip="{Binding ErrorCollection[UserName]}"/>
+        
         <Label Content="PassWord"
                Style="{StaticResource LabelStyle}"/>
         <!--<TextBox/>-->
@@ -31,7 +32,7 @@
             Text="{Binding Password , Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
             Height="25"/>-->
         <components:PasswordBoxControl 
-            Password ="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="25"/>
+            Password ="{Binding Password, ValidatesOnDataErrors=True, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="25" ToolTip="{Binding ErrorCollection[Password]}"/>
         <Button
             Command="{Binding LoginSecurityCommand}"
             Content="Login"

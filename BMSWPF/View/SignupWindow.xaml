@@ -44,7 +44,7 @@
         <TextBox
              Grid.Row="0" Margin="10"
                Grid.Column="1"
-            Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+            Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" ToolTip="{Binding ErrorCollection[Name]}"/>
 
         <Label Content="UserName" Margin="10"
                Grid.Row="1"
@@ -53,7 +53,7 @@
         <TextBox 
              Grid.Row="1" Margin="10"
                Grid.Column="1"
-            Text="{Binding UserName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+            Text="{Binding UserName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" ToolTip="{Binding ErrorCollection[UserName]}"/>
 
         <Label Content="Password" Margin="10"
                Grid.Row="2"
@@ -63,7 +63,7 @@
         <TextBox 
              Grid.Row="2" Margin="10"
                Grid.Column="1"
-            Text="{Binding Password,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+            Text="{Binding Password,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" ToolTip="{Binding ErrorCollection[Password]}"/>
 
         <Label Content="Address" Margin="10"               
                Grid.Row="3"
@@ -72,7 +72,7 @@
         <TextBox 
              Grid.Row="3" Margin="10"
                Grid.Column="1"
-            Text="{Binding Address,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+            Text="{Binding Address,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" ToolTip="{Binding ErrorCollection[Address]}"/>
 
             <Label Content="State" Margin="10"
                Grid.Row="4"
@@ -81,7 +81,7 @@
         <TextBox
              Grid.Row="4" Margin="10"
                Grid.Column="1"
-            Text="{Binding State,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+            Text="{Binding State,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" ToolTip="{Binding ErrorCollection[State]}"/>
 
         <Label Content="Country" Margin="10"
                 Grid.Row="5"
@@ -90,7 +90,7 @@
         <TextBox 
              Grid.Row="5" Margin="10"
                Grid.Column="1"
-            Text="{Binding Country,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+            Text="{Binding Country,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" ToolTip="{Binding ErrorCollection[Country]}"/>
 
         <Label Content="Email Id" Margin="10"
                 Grid.Row="0"
@@ -99,7 +99,7 @@
         <TextBox 
              Grid.Row="0" Margin="10"
                Grid.Column="3"
-            Text="{Binding EmailId,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+            Text="{Binding EmailId,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" ToolTip="{Binding ErrorCollection[EmailId]}"/>
 
         <Label Content="PAN" Margin="10"
                 Grid.Row="1"
@@ -108,7 +108,7 @@
         <TextBox 
              Grid.Row="1" Margin="10"
                Grid.Column="3"
-            Text="{Binding PAN,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+            Text="{Binding PAN,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" ToolTip="{Binding ErrorCollection[PAN]}"/>
 
         <Label Content="Contact Number" Margin="10"
                 Grid.Row="2"
@@ -117,7 +117,7 @@
         <TextBox 
              Grid.Row="2" Margin="10"
                Grid.Column="3"
-            Text="{Binding ContactNo,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+            Text="{Binding ContactNo,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" ToolTip="{Binding ErrorCollection[ContactNo]}"/>
 
         <Label Content="Date Of Birth" Margin="10"
                 Grid.Row="3"
@@ -127,7 +127,7 @@
              Grid.Row="3" Margin="10"
                Grid.Column="3"
             SelectedDateFormat="Short"
-            SelectedDate="{Binding DOB,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+            SelectedDate="{Binding DOB,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" ToolTip="{Binding ErrorCollection[DOB]}"/>
 
         <Label Content="Account Type" Margin="10" 
                 Grid.Row="4"

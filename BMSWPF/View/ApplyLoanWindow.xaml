@@ -33,13 +33,13 @@
 
         <Label Content="Loan Amount" Margin="5"
                Style="{StaticResource LabelStyle}"/>
-        <TextBox Text="{Binding LoanAmount,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+        <TextBox Text="{Binding LoanAmount,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="5" ToolTip="{Binding ErrorCollection[LoanAmount]}"/>
 
         <Label Content="Loan Date" Margin="5"
                Style="{StaticResource LabelStyle}"/>
         <DatePicker
             SelectedDateFormat="Short" Margin="5"
-            SelectedDate="{Binding LoanDate,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+            SelectedDate="{Binding LoanDate,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" ToolTip="{Binding ErrorCollection[LoanDate]}"/>
 
         <Label Content="ROI%" Margin="10"
                Style="{StaticResource LabelStyle}"/>
@@ -47,7 +47,7 @@
 
         <Label Content="Duration Of Loan (In Month)" Margin="10"
                Style="{StaticResource LabelStyle}"/>
-        <TextBox Text="{Binding LoanDuration,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+        <TextBox Text="{Binding LoanDuration,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Margin="5" ToolTip="{Binding ErrorCollection[LoanDuration]}"/>
 
         <Button
             Command="{Binding CreateLoanCommand}"

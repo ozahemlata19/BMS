@@ -10,8 +10,50 @@ using System.Threading.Tasks;
 
 namespace BMSWPF.ViewModel
 {
-    class ApplyLoanVM : INotifyPropertyChanged
+    class ApplyLoanVM : INotifyPropertyChanged, IDataErrorInfo
     {
+        public Dictionary<string, string> ErrorCollection { get; private set; } = new Dictionary<string, string>();
+        public string Error { get { return null; } }
+        public string this[string nameval]
+        {
+            get
+            {
+                string result = null;
+                switch (nameval)
+                {
+                    case "LoanAmount":
+                        if (string.IsNullOrWhiteSpace(LoanAmount))
+                            result = "Loan Amount can not be empty";
+                        else if (Convert.ToInt32(LoanAmount) > 0)
+                            result = "Loan Amount should be greater than Zero.";
+                        break;
+                    case "LoanDate":
+                        if (Convert.ToDateTime(LoanDate) > DateTime.Now)
+                            result = "Future date is not allowed.";
+                        break;
+                   
+                   
+                    case "LoanDuration":
+                        if (string.IsNullOrWhiteSpace(LoanDuration))
+                            result = "Loan Duration can not be empty";
+                        else if (LoanDuration.Length > 0)
+                            result = "Loan Duration should be greater than Zero.";
+                        break;
+
+                }
+                if (ErrorCollection.ContainsKey(nameval))
+                    ErrorCollection[nameval] = result;
+                else if (result != null)
+                    ErrorCollection.Add(nameval, result);
+                OnPropertyChanged("ErrorCollection");
+                return result;
+            }
+        }
+
+
+
+
+
         private string loanType;
 
         public string LoanType
