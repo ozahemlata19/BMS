@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace VMBMSTest
 {
     [TestFixture]
-    class AdminDashboardVM_Tests
+    class AdminInterfaceVM_Tests
     {
         private AdminInterfaceVM adminDashboardVM;
         private ApprovedStatusCommand approveCommand;
