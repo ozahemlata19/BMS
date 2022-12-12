@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace BMSWPF.ViewModel
 {
-    class OpenCommentCommand : ICommand
+    public class OpenCommentCommand : ICommand
     {
         public AdminInterfaceVM VM { get; set; }
 

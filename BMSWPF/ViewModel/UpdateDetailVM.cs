@@ -11,7 +11,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace BMSWPF.ViewModel
 {
-    class UpdateDetailVM :INotifyPropertyChanged
+    public class UpdateDetailVM :INotifyPropertyChanged
     {
         private string name;
 

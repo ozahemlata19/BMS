@@ -12,7 +12,7 @@ using System.Windows;
 
 namespace BMSWPF.ViewModel
 {
-    class SignupVM : INotifyPropertyChanged, IDataErrorInfo
+    public class SignupVM : INotifyPropertyChanged, IDataErrorInfo
     {
         public Dictionary<string, string> ErrorCollection { get; private set; } = new Dictionary<string, string>();
         public string Error { get { return null; } }

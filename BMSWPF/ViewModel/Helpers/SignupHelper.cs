@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BMSWPF.ViewModel.Helpers
 {
-    class SignupHelper
+    public class SignupHelper
     {
         public const string BASE_URL = "Http://localhost:34911/api/";
         public const string POST_URL = "Signup";

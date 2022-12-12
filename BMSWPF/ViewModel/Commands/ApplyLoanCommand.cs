@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace BMSWPF.ViewModel.Commands
 {
-    class ApplyLoanCommand : ICommand
+    public class ApplyLoanCommand : ICommand
     {
         public event EventHandler CanExecuteChanged;
         public UserInterfaceVM UserInterfaceVM { get; set; }

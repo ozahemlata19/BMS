@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace BMSWPF.ViewModel.Commands
 {
-    class CreateAccountCommand:ICommand
+    public class CreateAccountCommand :ICommand
     {
         public SignupVM VM { get; set; }
 

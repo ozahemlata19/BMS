@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace BMSWPF.ViewModel
 {
-    class AdminInterfaceVM : INotifyPropertyChanged
+    public class AdminInterfaceVM : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

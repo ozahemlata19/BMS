@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BMSWPF.Model.RequestData
 {
-    class LoginDetail
+    public class LoginDetail
     {
         public string UserName { get; set; }
 

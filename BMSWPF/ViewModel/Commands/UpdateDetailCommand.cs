@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace BMSWPF.ViewModel.Commands
 {
-    class UpdateDetailCommand :ICommand
+    public class UpdateDetailCommand :ICommand
     {
         public event EventHandler CanExecuteChanged;
         public UserInterfaceVM UserInterfaceVM { get; set; }

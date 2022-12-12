@@ -10,7 +10,7 @@ using System.Windows;
 
 namespace BMSWPF.ViewModel
 {
-    class CommentVM : INotifyPropertyChanged
+    public class CommentVM : INotifyPropertyChanged
     {
         private string warning;
 

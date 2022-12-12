@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace BMSWPF.ViewModel.Helpers
 {
-    class LoginSecurityHelper
+    public class LoginSecurityHelper
     {
         public const string BASE_URL = "Http://localhost:34911/api/";
         public const string GET_URL = "Login/{0}";

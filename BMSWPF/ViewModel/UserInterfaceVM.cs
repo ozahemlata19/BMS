@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BMSWPF.ViewModel
 {
-    class UserInterfaceVM : INotifyPropertyChanged
+    public class UserInterfaceVM : INotifyPropertyChanged
     {
         private string userName;
         public string UserName

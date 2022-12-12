@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BMSWPF.ViewModel
 {
-    class ApplyLoanVM : INotifyPropertyChanged, IDataErrorInfo
+    public class ApplyLoanVM : INotifyPropertyChanged, IDataErrorInfo
     {
         public Dictionary<string, string> ErrorCollection { get; private set; } = new Dictionary<string, string>();
         public string Error { get { return null; } }
@@ -19,25 +19,26 @@ namespace BMSWPF.ViewModel
             get
             {
                 string result = null;
+                //DateTime today =DateTime.Now;
                 switch (nameval)
                 {
                     case "LoanAmount":
                         if (string.IsNullOrWhiteSpace(LoanAmount))
                             result = "Loan Amount can not be empty";
-                        else if (Convert.ToInt32(LoanAmount) > 0)
-                            result = "Loan Amount should be greater than Zero.";
+                        else if (LoanAmount.Any(char.IsLetter) || LoanAmount.Any(char.IsSymbol) || LoanAmount.Any(char.IsPunctuation))
+                            result = "Loan Amount should be Numbers only.";
                         break;
-                    case "LoanDate":
-                        if (Convert.ToDateTime(LoanDate) > DateTime.Now)
-                            result = "Future date is not allowed.";
-                        break;
+                    //case "LoanDate":
+                    //    if (Convert.ToDateTime(LoanDate) > DateTime.Now)
+                    //        result = "Future date is not allowed.";
+                    //    break;
                    
                    
                     case "LoanDuration":
                         if (string.IsNullOrWhiteSpace(LoanDuration))
                             result = "Loan Duration can not be empty";
-                        else if (LoanDuration.Length > 0)
-                            result = "Loan Duration should be greater than Zero.";
+                        //else if (LoanDuration.Any(char.IsLetter) || LoanDuration.Any(char.IsSymbol) || LoanDuration.Any(char.IsPunctuation))
+                        //    result = "Loan Duration should be Number of Months";
                         break;
 
                 }

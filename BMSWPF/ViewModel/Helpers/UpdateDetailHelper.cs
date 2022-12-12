@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BMSWPF.ViewModel.Helpers
 {
-    class UpdateDetailHelper
+    public class UpdateDetailHelper
     {
         public const string BASE_URL = "http://localhost:34911/api/";
         public const string LOANSTATUS_PUT_URL = "Update/status/{0}";

@@ -12,7 +12,7 @@ using BMSWPF.ViewModel.Helpers;
 
 namespace BMSWPF.ViewModel
 {
-     class LoginVM : INotifyPropertyChanged,IDataErrorInfo
+    public class LoginVM : INotifyPropertyChanged,IDataErrorInfo
     {
         public Dictionary<string, string> ErrorCollection { get; private set; } = new Dictionary<string, string>();
         public string Error { get { return null; } }

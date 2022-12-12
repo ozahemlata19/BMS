@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace BMSWPF.ViewModel
 {
-    class RejectCommand : ICommand
+    public class RejectCommand : ICommand
     {
         public AdminInterfaceVM VM { get; set; }
 

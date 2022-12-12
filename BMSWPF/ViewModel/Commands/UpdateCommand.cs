@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace BMSWPF.ViewModel.Commands
 {
-    class UpdateCommand :ICommand
+    public class UpdateCommand :ICommand
     {
         public UpdateDetailVM VM { get; set; }
 

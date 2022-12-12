@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace BMSWPF.ViewModel.Commands
 {
-    class UserDetailsCommand : ICommand
+    public class UserDetailsCommand : ICommand
     {
         public LoginVM VM { get; set; }
 

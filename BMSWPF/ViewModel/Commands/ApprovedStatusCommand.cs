@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace BMSWPF.ViewModel
 {
-    class ApprovedStatusCommand : ICommand
+    public class ApprovedStatusCommand : ICommand
     {
         public AdminInterfaceVM VM { get; set; }
 

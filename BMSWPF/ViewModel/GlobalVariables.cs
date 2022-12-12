@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BMSWPF.ViewModel
 {
-    class GlobalVariables
+    public class GlobalVariables
     {
         private static string username;
 
